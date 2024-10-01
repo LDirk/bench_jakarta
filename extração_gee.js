@@ -47,7 +47,7 @@ var extractValues = function(image) {
   }).get('Cloud_water_entire_atmosphere_single_layer');
 
   var precipitation = image.select('Total_precipitation_surface_3_Hour_Accumulation').reduceRegion({
-    reducer: ee.Reducer.sum(),
+    reducer: ee.Reducer.mean(),
     geometry: jakarta,
     scale: 5000
   }).get('Total_precipitation_surface_3_Hour_Accumulation');
