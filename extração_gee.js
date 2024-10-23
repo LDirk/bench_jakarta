@@ -3,7 +3,7 @@ var jakarta = ee.Geometry.Rectangle(106.8456, -6.2146, 106.9356, -6.1546);
 
 
 var dataset = ee.ImageCollection('NOAA/CFSR')
-    .filter(ee.Filter.date('2020-01-01', '2021-05-13'))
+    .filter(ee.Filter.date('2020-01-01', '2021-05-14'))
     .filterBounds(jakarta)
     .filter(ee.Filter.stringEndsWith('system:index', '03')); // Filtro para system:index que termina com '03'
     
